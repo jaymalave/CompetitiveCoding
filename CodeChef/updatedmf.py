@@ -2,7 +2,7 @@ def maxFill(arr, n):
 	fill = 0
 	
 	for i in range(1, n-1):
-		left = arr[i];
+		left = arr[i]
 		for j in range(i):
 			left = max(left, arr[j])
 			

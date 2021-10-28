@@ -2,7 +2,6 @@
 def ladduCount():
     print("test case check")
     m = []
-    l = len(m)
     laddu_count = []
     
     n = int(input())
@@ -21,12 +20,14 @@ def ladduCount():
             laddu_count[i] += 2
         elif (m[i] < m[i-1] and m[i] < m[i+1]):
             pass
+        else:
+            pass
     
     if m[0] > m[1]:
         laddu_count[0] += 1
     
-    if m[l] > m[l-1]:
-        laddu_count[l] += 1
+    if m[n-1] > m[n-2]:
+        laddu_count[n-1] += 1
     
     return laddu_count
         
