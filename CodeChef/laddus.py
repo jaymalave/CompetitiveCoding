@@ -9,9 +9,7 @@ def ladduCount():
     for i in range(0,n):
         laddu_count.append(1)
     
-    for i in range(0, n):
-      ele = int(input())
-      m.append(ele)
+    m = list(map(int, input().split()))
      
     for i in range(1, n-1):
         if (m[i] > m[i-1]):
@@ -33,5 +31,7 @@ if __name__ == "__main__":
     #test case count
     t = int(input())
     while(t > 0):
-        print(ladduCount())
+        ans = ladduCount()
+        for i in ans:
+            print(str(ans[i]) + " ", end="")
         t -= 1
