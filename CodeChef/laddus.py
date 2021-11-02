@@ -14,20 +14,17 @@ def ladduCount():
       m.append(ele)
      
     for i in range(1, n-1):
-        if (m[i] > m[i-1] and m[i] < m[i+1]) or (m[i] < m[i-1] and m[i] > m[i+1]):
-            laddu_count[i] += 1
-        elif (m[i] > m[i-1] and m[i] > m[i+1]):
-            laddu_count[i] += 2
-        elif (m[i] < m[i-1] and m[i] < m[i+1]):
-            pass
+        if (m[i] > m[i-1]):
+            laddu_count[i] = laddu_count[i-1] + 1
         else:
             pass
+        
     
     if m[0] > m[1]:
-        laddu_count[0] += 1
+        laddu_count[0] = laddu_count[1] + 1
     
     if m[n-1] > m[n-2]:
-        laddu_count[n-1] += 1
+        laddu_count[n-1] = laddu_count[n-2] + 1
     
     return laddu_count
         
